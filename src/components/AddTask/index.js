@@ -5,25 +5,41 @@ class AddTask extends Component {
 
   constructor(props){
     super(props);
-    this.addTask = this.addTask.bind(this);
+    this.handleSubmit = this.addTask.bind(this);
+    this.state = {
+      titulo : '',
+      descripcion : ''
+    };
   }
 
-  addTask(e){
-    e.preventDefault();
+  handleSubmits(e){
 
-    const titulo = e.target.elements.titulo.value.trim();
-    const descripcion = e.target.elements.descripcion.value.trim();
+    e.preventDefault();
 
     if(titulo && descripcion){
       console.log(e.target.elements.titulo.value);
       console.log(e.target.elements.descripcion.value);
+      this.props.addTask();
+      
     }
+  }
+
+  handleChange(e){
+    const tituloNuevo = e.target.elements.titulo.value.trim();
+    const descripcionNuevo = e.target.elements.descripcion.value.trim();
+
+    this.setState(() => {
+      return {
+        titulo : tituloNuevo,
+        descripcion : descripcionNuevo
+      }
+    });
   }
 
   render() {
     return (
       <div className="AddTask">
-        <form onSubmit={this.addTask}>
+        <form onSubmit={this.handleSubmit}>
             <label>Titulo</label>
             <input type="text" name="titulo"></input>
             <label>Descripcion</label>
