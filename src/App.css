@@ -48,32 +48,12 @@
   width: 60%;
 }
 
-.Task-div{
-  width: 20%;
-  border-bottom: 1px solid beige; 
-  margin-bottom: 1.5;
-  padding-bottom: 2em;
-}
-
-.Task-div h3{
-  padding-top: 1.5em;
-  color: cornflowerblue;
-  margin-bottom: 1.5em;
-}
-
-.Task-container{
-  margin: 0 auto;
-}
-
 .Task-iconTrash{
   color: red;
   cursor: pointer;
   font-size: 1.2em;
 }
 
-.Task-title{
-  font-size: 1em;
-}
 
 .Task-deleteAllbtn{
   margin-bottom: 2em;

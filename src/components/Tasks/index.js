@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import './App.css';
 import Task from '../Task';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
